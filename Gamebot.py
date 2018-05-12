@@ -38,12 +38,12 @@ async def on_ready():
 
 # This is a basic example of a call and response command. You tell it do "this" and it does it.
 @client.command()
-async def hi():
+async def hi(ctx):
         """Experimental Command. Just says hi. And stuff."""
-        await client.say("Hello I am game bot...Plz be my fren")
+        await ctx.say("Hello I am game bot...Plz be my fren")
 
 @client.command()
-async def roll(*,args):
+async def roll(ctx,*,args):
         """Rolls a dice. Formatted as  <no of dice>d<no of sides> eg. 3d10"""
         y=str(args).replace(" ","")
         x=""
@@ -64,14 +64,13 @@ async def roll(*,args):
         s= str(sum(rolls))
         y=y.replace(x,s)
         res+=str(eval(y))
-        await client.say(res)
+        await ctx.say(res)
 
 @client.command()
 async def pick(*, args):
         """A pick device. Uses a list so i think any number of arguments can work"""
         y=str(args)
         x=random.choice(y.split(','))
-        await client.say("I give you: "+x)
+        await ctx.say("I give you: "+x)
 
-client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')
-
+client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')  ​
