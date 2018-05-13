@@ -68,7 +68,7 @@ async def hi(ctx):
 @client.command()
 async def roll(ctx,*,args):
         """Rolls a dice. Formatted as  <no of dice>d<no of sides> eg. 3d10"""
-        res=roll(args)
+        res=rolld(args)
         await ctx.send(res)
 
 @client.command()
