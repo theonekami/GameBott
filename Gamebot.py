@@ -66,7 +66,7 @@ async def hi(ctx):
         await ctx.send("Hello I am game bot...Plz be my fren")
 
 @client.command()
-async def rolld(ctx,*,args):
+async def roll(ctx,*,args):
         """Rolls a dice. Formatted as  <no of dice>d<no of sides> eg. 3d10"""
         res=roll(args)
         await ctx.send(res)
