@@ -72,7 +72,7 @@ async def roll(ctx,*,args):
         await ctx.send(res)
 
 @client.command()
-async def pick(*, args):
+async def pick(ctx,*, args):
         """A pick device. Uses a list so i think any number of arguments can work"""
         y=str(args)
         x=random.choice(y.split(','))
