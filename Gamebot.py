@@ -40,7 +40,7 @@ async def on_ready():
 @client.command()
 async def hi(ctx):
         """Experimental Command. Just says hi. And stuff."""
-        await ctx.say("Hello I am game bot...Plz be my fren")
+        await ctx.send("Hello I am game bot...Plz be my fren")
 
 @client.command()
 async def roll(ctx,*,args):
@@ -64,13 +64,13 @@ async def roll(ctx,*,args):
         s= str(sum(rolls))
         y=y.replace(x,s)
         res+=str(eval(y))
-        await ctx.say(res)
+        await ctx.send(res)
 
 @client.command()
 async def pick(*, args):
         """A pick device. Uses a list so i think any number of arguments can work"""
         y=str(args)
         x=random.choice(y.split(','))
-        await ctx.say("I give you: "+x)
+        await ctx.send("I give you: "+x)
 
 client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')
