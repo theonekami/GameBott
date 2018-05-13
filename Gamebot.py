@@ -78,4 +78,4 @@ async def pick(*, args):
         x=random.choice(y.split(','))
         await ctx.send("I give you: "+x)
 
-client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')  ​
+client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')  
