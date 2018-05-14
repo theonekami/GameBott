@@ -13,7 +13,7 @@ import math ##for funsies
 
 
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
-client = commands.Bot(description="Game Boty WHEEE", command_prefix=("."), pm_help = False)
+client = commands.Bot(description="Game Boty WHEEE", command_prefix=(".","gm ","Gm ","GM "), pm_help = False)
 
 # This is what happens everytime the bot launches. In this case, it prints information like server count, user count the bot is connected to, and the bot id in the console.
 # Do not mess with it because the bot can break, if you wish to do so, please consult me or someone trusted.
