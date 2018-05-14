@@ -18,7 +18,7 @@ class TicTacToe:
 
     def board(self):
         x=""
-        for i in board_img:
+        for i in self.board_img:
             for j in i:
                 x+=j
         return x
