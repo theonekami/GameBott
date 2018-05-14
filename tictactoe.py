@@ -25,7 +25,7 @@ class TicTacToe:
 
     @commands.command()
     async def draw(self,ctx):
-        em= discord.Embed(description=board())
+        em= discord.Embed(title="TicTacToe",description=self.board())
         await ctx.send(embed=em)
 ##        await ctx.send(x)
 
