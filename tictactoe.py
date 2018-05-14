@@ -15,7 +15,7 @@ class TicTacToe:
 ]
 
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
-        self.gs=False
+        self.gs=True
 
     def board(self):
         x=""
@@ -24,10 +24,10 @@ class TicTacToe:
                 x+=j
         return x
 
-    def game_on():
+    def game_on(self):
         return self.gs
     
-    @commands.check(game_on)
+    @commands.check(self.game_on)
     @commands.command()
     async def draw(self,ctx):
         em= discord.Embed(title="TicTacToe",description=self.board())
