@@ -24,8 +24,10 @@ class TicTacToe:
                 x+=j
         return x
 
+
+    @staticmeathod
     def game_on(ctx):
-        return self.gs
+        return ctx.cog.gs
     
     @commands.check(game_on)
     @commands.command()
