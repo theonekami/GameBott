@@ -13,9 +13,9 @@ class TicTacToe:
 :large_blue_circle::large_blue_circle::large_blue_circle:
 :large_blue_circle::large_blue_circle::large_blue_circle:
 """
-##        em= discord.Embed(title="Tic Tac Toe.",discription=x)
-##        await ctx.send(embed=em)
-        await ctx.send(x)
+        em= discord.Embed(title="Tic Tac Toe.",discription=x)
+        await ctx.send(embed=em)
+##        await ctx.send(x)
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
