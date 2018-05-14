@@ -79,7 +79,7 @@ async def pick(ctx,*, args):
         await ctx.send("I give you: "+x)
 
 @client.command()
-async def reload(ctx,*, args):
+async def reload(ctx):
         client.load_extenstion(tictactoe)
         ctx.send("Good job. It's Reloaded. Who do i kill?")
         
