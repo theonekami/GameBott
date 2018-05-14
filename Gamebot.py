@@ -81,5 +81,6 @@ async def pick(ctx,*, args):
 @client.command()
 async def reload(ctx,*, args):
         client.load_extenstion(tictactoe)
+        ctx.send("Good job. It's Reloaded. Who do i kill?")
         
 client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')
