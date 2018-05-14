@@ -9,14 +9,14 @@ class TicTacToe:
 
 
 :arrow_upper_left::one::two::three: 
-:one::large_blue_circle::large_blue_circle::large_blue_circle:
-:two::large_blue_circle::large_blue_circle::large_blue_circle:
-:three::large_blue_circle::large_blue_circle::large_blue_circle:
+:one::red_circle::red_circle::red_circle:
+:two::red_circle::red_circle::red_circle:
+:three::red_circle::red_circle::red_circle:
 
 
 
 """
-        self.blank="large_blue_circle"
+        self.blank="red_circle"
         self.cross="crossed_swords"
         self.circle="shield"
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
