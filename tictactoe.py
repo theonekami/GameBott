@@ -4,9 +4,9 @@ from discord.ext import commands
 class TicTacToe:
     def __init__(self, bot):
         self.bot=bot
-        self.blank="red_circle"
-        self.cross="crossed_swords"
-        self.circle="shield"
+        self.blank=":red_circle:"
+        self.cross=":crossed_swords:"
+        self.circle=":shield:"
         self.board_img=[
 [":arrow_upper_left::one::two::three:\n"],
 [":one:",self.blank,self.blank,self.blank,"\n"],
