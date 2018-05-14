@@ -78,4 +78,8 @@ async def pick(ctx,*, args):
         x=random.choice(y.split(','))
         await ctx.send("I give you: "+x)
 
+@client.command()
+async def reload(ctx,*, args):
+        client.load_extenstion(tictactoe)
+        
 client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')

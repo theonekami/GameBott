@@ -19,8 +19,8 @@ class TicTacToe:
 """
         ctx.send(x)
 
-    
-        
+def setup(bot):
+    bot.add_cog(draw(bot))      
 
 ##class RussianRoullete:
 ##    def __init__(self,bot):
