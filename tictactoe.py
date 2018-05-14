@@ -17,7 +17,7 @@ class TicTacToe:
     ¦    ¦    ¦
 ```
 """
-        ctx.send(x)
+        await ctx.send(x)
 
 def setup(bot):
     bot.add_cog(draw(bot))      
