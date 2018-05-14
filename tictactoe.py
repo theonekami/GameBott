@@ -9,10 +9,16 @@ class TicTacToe:
     async def draw(self,ctx):
 
         x="""
+
+
+
 :arrow_upper_left::one: :two: :three: 
 :one::large_blue_circle::large_blue_circle::large_blue_circle:
 :two::large_blue_circle::large_blue_circle::large_blue_circle:
 :three::large_blue_circle::large_blue_circle::large_blue_circle:
+
+
+
 """
         em= discord.Embed(title="Tic Tac Toe.",description=x)
         await ctx.send(embed=em)
