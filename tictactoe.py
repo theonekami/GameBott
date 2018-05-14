@@ -29,6 +29,15 @@ class TicTacToe:
         await ctx.send(embed=em)
 ##        await ctx.send(x)
 
+    @commands.command()
+    async def play(self,ctx,*,args=None):
+        if( args is None):
+            await ctx.say("Where do i put it?")
+            return
+        args=args.split(',')
+        self.board_img[int(args[0])][int(args[1])]=self.cross
+        await ctx.send("ok so far so good")
+
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
 
