@@ -20,7 +20,7 @@ class TicTacToe:
         await ctx.send(x)
 
 def setup(bot):
-    bot.add_cog(draw(bot))      
+    bot.add_cog(TicTacToe(bot)) 
 
 ##class RussianRoullete:
 ##    def __init__(self,bot):
