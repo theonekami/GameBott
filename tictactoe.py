@@ -7,6 +7,7 @@ class TicTacToe:
 
     @commands.command()
     async def draw(self,ctx):
+
         x="""
 ```
 
@@ -17,7 +18,8 @@ class TicTacToe:
   ¦ 7  ¦  8  ¦  9  ¦
 ```
 """
-        await ctx.send(x)
+        discord.Embed(title="Tic Tac Toe.",discription=x)
+        await ctx.send(embed=em)
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
