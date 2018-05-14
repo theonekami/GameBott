@@ -24,7 +24,7 @@ class TicTacToe:
                 x+=j
         return x
 
-    def game_on(ctx):
+    def game_on(self,ctx):
         return self.gs
     
     @commands.check(game_on)
