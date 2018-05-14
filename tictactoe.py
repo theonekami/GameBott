@@ -16,11 +16,14 @@ class TicTacToe:
 
 
 """
+        blank="large_blue_circle"
+        cross="crossed_swords"
+        circle="shield"
         board_array=[[0,0,0],[0,0,0],[0,0,0]]
 
     @commands.command()
     async def draw(self,ctx):
-        em= discord.Embed(title="Tic Tac Toe.",description=self.board_img)
+        em= discord.Embed(description=self.board_img)
         await ctx.send(embed=em)
 ##        await ctx.send(x)
 
