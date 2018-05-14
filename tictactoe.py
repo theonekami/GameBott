@@ -32,9 +32,13 @@ class TicTacToe:
     @commands.command()
     async def play(self,ctx,*,args=None):
         if( args is None):
-            await ctx.say("Where do i put it?")
+            await ctx.send("Where do i put it?")
             return
         args=args.split(',')
+        y=self.board_img[int(args[0])][int(args[1])]
+        if( y != self.blank):
+            await ctx.send("Occupied")
+            return
         self.board_img[int(args[0])][int(args[1])]=self.cross
         await ctx.send("ok so far so good")
 
