@@ -4,7 +4,7 @@ from discord.ext import commands
 class TicTacToe:
     def __init__(self, bot):
         self.bot=bot
-        board_img="""
+        self.board_img="""
 
 
 
@@ -16,10 +16,10 @@ class TicTacToe:
 
 
 """
-        blank="large_blue_circle"
-        cross="crossed_swords"
-        circle="shield"
-        board_array=[[0,0,0],[0,0,0],[0,0,0]]
+        self.blank="large_blue_circle"
+        self.cross="crossed_swords"
+        self.circle="shield"
+        self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
 
     @commands.command()
     async def draw(self,ctx):
