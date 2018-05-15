@@ -5,9 +5,22 @@ from discord.ext import commands
 async def game_on(ctx):
     return ctx.cog.gs
 
+async def joins_open(ctx):
+    if ctx.cog.no_of_players>ctx.cog.players_joined:
+        return True
+    else:
+        return False
+
+
 class TicTacToe:
     def __init__(self, bot):
         self.bot=bot
+
+        self.gs=False
+        self.users=[]
+        self.no_of_players=2
+        self.players_joined=0
+        
         self.blank=":red_circle:"
         self.cross=":crossed_swords:"
         self.circle=":shield:"
@@ -19,7 +32,7 @@ class TicTacToe:
 ]
 
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
-        self.gs=False
+
 
     def draw(self):
         em= discord.Embed(title="TicTacToe",description=self.board())
@@ -32,11 +45,18 @@ class TicTacToe:
                 x+=j
         return x
 
+    @commands.check(joins_open)
+    @commands.command()
+    async def join(self,ctx):
+        self.users.append(ctx.author)
+        if(len(self.users)==self.no_of_players):
+            self.gs=True
 
     @commands.command()
     async def tictactoe(self,ctx):
-        self.gs=True
         await ctx.send(embed=self.draw())
+        self.users.append(ctx.author)
+        await ctx.send("**Use** `.join` **To join**")
     
     @commands.check(game_on)
     @commands.command()
@@ -55,6 +75,7 @@ class TicTacToe:
             await ctx.send("Occupied")
             return
         self.board_img[int(args[0])][int(args[1])]=self.cross
+        self.board_array[int(args[0]-1)][int(args[1])-1]
         await ctx.send(embed=self.draw())
         await ctx.send("ok so far so good")
 
