@@ -54,7 +54,7 @@ class TicTacToe:
         await self.draw(ctx)
         await ctx.send(current_turn[0].mention+"**Use** `.play row,column` **to play**")
 
-    def switch():
+    def switch(self):
         if(self.current_turn[2]>0):
             self.current_turn.append(self.users[1])
             self.current_turn.append(self.circle)
@@ -72,11 +72,12 @@ class TicTacToe:
     @commands.check(joins_open)
     @commands.command()
     async def join(self,ctx):
+        self.players_joined+=1
         self.users.append(ctx.author)
         if(len(self.users)==self.no_of_players):
             self.gs=True
             await self.construct(ctx)
-        self.players_joined+=1
+        
 
     @commands.command()
     async def tictactoe(self,ctx):
