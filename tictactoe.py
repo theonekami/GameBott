@@ -47,7 +47,7 @@ class TicTacToe:
                 x+=j
         return x
 
-    def construct(self,ctx):
+    async def construct(self,ctx):
         self.current_turn.append(users[0])
         self.current_turn.append(self.cross)
         self.current_turn.append(1)
