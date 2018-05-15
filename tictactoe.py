@@ -103,7 +103,7 @@ class TicTacToe:
         self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
         await self.draw(ctx)
-        await ctx.send("ok so far so good")
+        await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
