@@ -25,7 +25,7 @@ class TicTacToe:
         return x
 
 
-    @staticmethod
+##    @staticmethod
     def game_on(ctx):
         return ctx.cog.gs
     
