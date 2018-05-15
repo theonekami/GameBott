@@ -34,6 +34,12 @@ class TicTacToe:
 
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
 
+    @commands.command()
+    async def Forcestop(self,ctx):
+        self.gs=False
+        self.player_joined=0
+        self.users=[]
+        await ctx.send("The game is STOP")
 
     async def draw(self,ctx):
         em= discord.Embed(title="TicTacToe",description=self.board())
@@ -64,10 +70,7 @@ class TicTacToe:
             self.current_turn[1]=self.cross
             self.current_turn[2]=1
 
-    @commands.command()
-    async def Forcestop(self,ctx):
-        self.gs=False
-        await ctx.send("The game is STOP")
+
     
     @commands.check(joins_open)
     @commands.command()
