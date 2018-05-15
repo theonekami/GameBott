@@ -52,17 +52,17 @@ class TicTacToe:
         self.current_turn.append(self.cross)
         self.current_turn.append(1)
         await self.draw(ctx)
-        await ctx.send(current_turn[0].mention+"**Use** `.play row,column` **to play**")
+        await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
 
     def switch(self):
         if(self.current_turn[2]>0):
-            self.current_turn.append(self.users[1])
-            self.current_turn.append(self.circle)
-            self.current_turn.append(-1)
+            self.current_turn[0]=self.users[1]
+            self.current_turn[1]=self.circle
+            self.current_turn[2]=-1
         else:
-            self.current_turn.append(self.users[0])
-            self.current_turn.append(self.cross)
-            self.current_turn.append(1)
+            self.current_turn[0]=self.users[0]
+            self.current_turn[1]=self.cross
+            self.current_turn[2]=1
 
     @commands.command()
     async def Forcestop(self,ctx):

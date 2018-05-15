@@ -42,16 +42,6 @@ def rolld(args):
 
 @client.event
 async def on_ready():
-        print('Logged in as '+client.user.name+' (ID:'+client.user.id+') | Connected to '+str(len(client.servers))+' servers | Connected to '+str(len(set(client.get_all_members())))+' users')
-        print('--------')
-        print('Current Discord.py Version: {} | Current Python Version: {}'.format(discord.__version__, platform.python_version()))
-        print('--------')
-        print('Use this link to invite {}:'.format(client.user.name))
-        print('https://discordapp.com/oauth2/authorize?client_id={}&scope=bot&permissions=8'.format(client.user.id))
-        print('--------')
-        print('Support Discord Server: https://discord.gg/FNNNgqb')
-        print('Github Link: https://github.com/Habchy/BasicBot')
-        print('--------')
         print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
         print('Created by Kaminolucky')
         await client.edit_profile(username= "GameBot")
