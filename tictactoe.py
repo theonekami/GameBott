@@ -75,7 +75,7 @@ class TicTacToe:
     @commands.check(joins_open)
     @commands.command()
     async def join(self,ctx):
-        for i in users:
+        for i in self.users:
             if ctx.author==i:
                 return
         self.players_joined+=1
