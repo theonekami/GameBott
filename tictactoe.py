@@ -35,7 +35,7 @@ class TicTacToe:
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
 
 
-    def draw(self,ctx):
+    async def draw(self,ctx):
         em= discord.Embed(title="TicTacToe",description=self.board())
         await ctx.send(embed=em)
 
