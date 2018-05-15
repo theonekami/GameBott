@@ -24,6 +24,7 @@ class TicTacToe:
         self.blank=":red_circle:"
         self.cross=":crossed_swords:"
         self.circle=":shield:"
+        self.current_turn=[]
         self.board_img=[
 [":arrow_upper_left::one::two::three:\n"],
 [":one:",self.blank,self.blank,self.blank,"\n"],
@@ -45,19 +46,42 @@ class TicTacToe:
                 x+=j
         return x
 
+    def construct():
+        self.current_turn.append(users[0])
+        self.current_turn.append(self.cross)
+        self.current_turn.append(1)
+        await ctx.send(embed=self.draw())
+        await ctx.send(current_turn[0].mention+"**Use** `.play row,column` **to play**")
+
+    def switch():
+        if(self.current_turn[2]>0):
+            self.current_turn.append(users[1])
+            self.current_turn.append(self.cirlce)
+            self.current_turn.append(-1)
+        else:
+            self.current_turn.append(users[0])
+            self.current_turn.append(self.cross)
+            self.current_turn.append(1)
+
+    @commands.command()
+    async def Forcestop(self,ctx):
+        aself.gs=False
+        await ctx.send("The game is STOP")
+    
     @commands.check(joins_open)
     @commands.command()
     async def join(self,ctx):
         self.users.append(ctx.author)
         if(len(self.users)==self.no_of_players):
             self.gs=True
+            self.construct()
         self.players_joined+=1
 
     @commands.command()
     async def tictactoe(self,ctx):
         await ctx.send(embed=self.draw())
         await ctx.send("**Use** `.join` **To join**")
-    
+            
     @commands.check(game_on)
     @commands.command()
     async def drawb(self,ctx):
@@ -74,9 +98,10 @@ class TicTacToe:
         if( y != self.blank):
             await ctx.send("Occupied")
             return
-        self.board_img[int(args[0])][int(args[1])]=self.cross
-        self.board_array[int(args[0]-1)][int(args[1])-1]
+        self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
+        self.board_array[int(args[0]-1)][int(args[1])-1]=self.current_turn[2]
         await ctx.send(embed=self.draw())
+        self.switch()
         await ctx.send("ok so far so good")
 
 def setup(bot):
