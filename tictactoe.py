@@ -72,6 +72,9 @@ class TicTacToe:
     @commands.check(joins_open)
     @commands.command()
     async def join(self,ctx):
+        for i in users:
+            if ctx.author==i:
+                return
         self.players_joined+=1
         self.users.append(ctx.author)
         if(len(self.users)==self.no_of_players):
@@ -91,6 +94,8 @@ class TicTacToe:
     @commands.check(game_on)
     @commands.command()
     async def play(self,ctx,*,args=None):
+        if (ctx.author != self.current_turn[0]):
+            return
         if( args is None):
             await ctx.send("Where do i put it?")
             return
