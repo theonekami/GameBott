@@ -37,7 +37,7 @@ class TicTacToe:
     @commands.command()
     async def Forcestop(self,ctx):
         self.gs=False
-        self.player_joined=0
+        self.players_joined=0
         self.users.clear()
         await ctx.send("The game is STOP")
 
