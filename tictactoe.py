@@ -21,6 +21,10 @@ class TicTacToe:
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
         self.gs=False
 
+    def draw(self):
+        em= discord.Embed(title="TicTacToe",description=self.board())
+        return em
+
     def board(self):
         x=""
         for i in self.board_img:
@@ -29,14 +33,15 @@ class TicTacToe:
         return x
 
 
-
+    @commands.command()
+    async def tictactoe():
+        self.gs=True
+        await ctx.send(embed=self.draw())
     
     @commands.check(game_on)
     @commands.command()
-    async def draw(self,ctx):
-        em= discord.Embed(title="TicTacToe",description=self.board())
-        await ctx.send(embed=em)
-##        await ctx.send(x)
+    async def drawb(self,ctx):
+        await ctx.send(embed=self.draw())
 
     @commands.check(game_on)
     @commands.command()
@@ -50,6 +55,7 @@ class TicTacToe:
             await ctx.send("Occupied")
             return
         self.board_img[int(args[0])][int(args[1])]=self.cross
+        await ctx.send(embed=self.draw())
         await ctx.send("ok so far so good")
 
 def setup(bot):
