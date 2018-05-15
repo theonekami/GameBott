@@ -37,7 +37,8 @@ class TicTacToe:
 
     def draw(self):
         em= discord.Embed(title="TicTacToe",description=self.board())
-        return em
+        await ctx.send(embed=em)
+
 
     def board(self):
         x=""
@@ -50,7 +51,7 @@ class TicTacToe:
         self.current_turn.append(users[0])
         self.current_turn.append(self.cross)
         self.current_turn.append(1)
-        await ctx.send(embed=self.draw())
+        self.draw()
         await ctx.send(current_turn[0].mention+"**Use** `.play row,column` **to play**")
 
     def switch():
@@ -79,13 +80,12 @@ class TicTacToe:
 
     @commands.command()
     async def tictactoe(self,ctx):
-        await ctx.send(embed=self.draw())
         await ctx.send("**Use** `.join` **To join**")
             
     @commands.check(game_on)
     @commands.command()
     async def drawb(self,ctx):
-        await ctx.send(embed=self.draw())
+        self.draw()
 
     @commands.check(game_on)
     @commands.command()
@@ -100,7 +100,7 @@ class TicTacToe:
             return
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
         self.board_array[int(args[0]-1)][int(args[1])-1]=self.current_turn[2]
-        await ctx.send(embed=self.draw())
+        self.draw()
         self.switch()
         await ctx.send("ok so far so good")
 
