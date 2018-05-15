@@ -38,6 +38,7 @@ class TicTacToe:
         await ctx.send(embed=em)
 ##        await ctx.send(x)
 
+    @commands.check(game_on)
     @commands.command()
     async def play(self,ctx,*,args=None):
         if( args is None):
