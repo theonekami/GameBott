@@ -34,7 +34,7 @@ class TicTacToe:
 
 
     @commands.command()
-    async def tictactoe():
+    async def tictactoe(self):
         self.gs=True
         await ctx.send(embed=self.draw())
     
