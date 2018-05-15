@@ -48,7 +48,7 @@ class TicTacToe:
         return x
 
     async def construct(self,ctx):
-        self.current_turn.append(users[0])
+        self.current_turn.append(self.users[0])
         self.current_turn.append(self.cross)
         self.current_turn.append(1)
         await self.draw(ctx)
@@ -56,11 +56,11 @@ class TicTacToe:
 
     def switch():
         if(self.current_turn[2]>0):
-            self.current_turn.append(users[1])
-            self.current_turn.append(self.cirlce)
+            self.current_turn.append(self.users[1])
+            self.current_turn.append(self.circle)
             self.current_turn.append(-1)
         else:
-            self.current_turn.append(users[0])
+            self.current_turn.append(self.users[0])
             self.current_turn.append(self.cross)
             self.current_turn.append(1)
 
