@@ -51,11 +51,11 @@ class TicTacToe:
         self.users.append(ctx.author)
         if(len(self.users)==self.no_of_players):
             self.gs=True
+        self.players_joined+=1
 
     @commands.command()
     async def tictactoe(self,ctx):
         await ctx.send(embed=self.draw())
-        self.users.append(ctx.author)
         await ctx.send("**Use** `.join` **To join**")
     
     @commands.check(game_on)
