@@ -20,6 +20,7 @@ class TicTacToe:
         self.users=[]
         self.no_of_players=2
         self.players_joined=0
+        self.no_of_turns=0;
         
         self.blank=":red_circle:"
         self.cross=":crossed_swords:"
@@ -39,6 +40,7 @@ class TicTacToe:
         self.gs=False
         self.players_joined=0
         self.users.clear()
+        self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
         await ctx.send("The game is STOP")
 
     async def draw(self,ctx):
@@ -70,7 +72,23 @@ class TicTacToe:
             self.current_turn[1]=self.cross
             self.current_turn[2]=1
 
-##    def 
+    def check():
+        s1=0
+        s2=0
+        s3=0
+        s4=0
+        for i in range(0,3):
+            s3+=self.board[i][i]
+            s4+=self.board[i][2-i]
+            for j in range(0,3):
+               s1+= self.board_array[i][j]
+               s2+= self.board_array[j][i]
+        if( s1 ==3 or s2== 3 or s3==3 or s4 == 3):
+            return 0
+        elif( s1 ==-3 or s2==-3 or s3==-3 or s4 == -3):
+            return 1
+        else:
+            return-1
 
 
     
@@ -113,7 +131,10 @@ class TicTacToe:
         self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
         await self.draw(ctx)
-        await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
+        if(self.check()<0):
+            await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
+        else:
+            await ctx.send(self.users[self.check()].mention+"WONN!!")
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
