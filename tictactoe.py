@@ -51,7 +51,7 @@ class TicTacToe:
         self.current_turn.append(users[0])
         self.current_turn.append(self.cross)
         self.current_turn.append(1)
-        self.draw(ctx)
+        await self.draw(ctx)
         await ctx.send(current_turn[0].mention+"**Use** `.play row,column` **to play**")
 
     def switch():
@@ -75,7 +75,7 @@ class TicTacToe:
         self.users.append(ctx.author)
         if(len(self.users)==self.no_of_players):
             self.gs=True
-            self.construct(ctx)
+            await self.construct(ctx)
         self.players_joined+=1
 
     @commands.command()
@@ -85,7 +85,7 @@ class TicTacToe:
     @commands.check(game_on)
     @commands.command()
     async def drawb(self,ctx):
-        self.draw(ctx)
+        await self.draw(ctx)
 
     @commands.check(game_on)
     @commands.command()
@@ -100,7 +100,7 @@ class TicTacToe:
             return
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
         self.board_array[int(args[0]-1)][int(args[1])-1]=self.current_turn[2]
-        self.draw(ctx)
+        await self.draw(ctx)
         self.switch()
         await ctx.send("ok so far so good")
 
