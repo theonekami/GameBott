@@ -1,6 +1,10 @@
 import discord,openpyxl
 from discord.ext import commands
 
+
+async def game_on(ctx):
+    return ctx.cog.gs
+
 class TicTacToe:
     def __init__(self, bot):
         self.bot=bot
@@ -25,9 +29,7 @@ class TicTacToe:
         return x
 
 
-##    @staticmethod
-    def game_on(ctx):
-        return ctx.cog.gs
+
     
     @commands.check(game_on)
     @commands.command()
