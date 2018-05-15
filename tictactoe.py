@@ -99,9 +99,9 @@ class TicTacToe:
             await ctx.send("Occupied")
             return
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
-        self.board_array[int(args[0]-1)][int(args[1])-1]=self.current_turn[2]
-        await self.draw(ctx)
+        self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
+        await self.draw(ctx)
         await ctx.send("ok so far so good")
 
 def setup(bot):
