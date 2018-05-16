@@ -83,7 +83,7 @@ class TicTacToe:
             self.current_turn[1]=self.cross
             self.current_turn[2]=1
 
-    def wincon():
+    def wincon(self):
         s1=0
         s2=0
         s3=0
