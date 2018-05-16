@@ -84,24 +84,27 @@ class TicTacToe:
             self.current_turn[2]=1
 
     def wincon(self):
-        s1=0
-        s2=0
-        s3=0
-        s4=0
-        for i in range(0,3):
-            s3+=self.board_array[i][i]
-            s4+=self.board_array[i][2-i]
-            for j in range(0,3):
-               s1+= self.board_array[i][j]
-               s2+= self.board_array[j][i]
-        if( s1 ==3 or s2== 3 or s3==3 or s4 == 3):
-            return 0
-        elif( s1 ==-3 or s2==-3 or s3==-3 or s4 == -3):
+        win=""
+        x=self.cross
+        y=self.circle
+        for i in (1, 4):
+            if (self.board_img[i][1]==self.board_img[i][2]==self.board_img[i][3]):
+                win=self.board_img[i][1]
+                break
+            elif(self.board_img[1][i]==self.board_img[2][i]==self.board_img[3][i]):
+                win=self.board_img[1][i]
+                break
+        if( (win is "") and self.board_img[1][1]==self.board_img[2][2]==self.board_img[3][3]):
+            win=self.board_img[1][1]
+        elif( (win is "") and self.board_img[1][3]==self.board_img[2][2]==self.board_img[3][1]):
+            win=self.board_img[1][1]
+
+        if( win == x):
             return 1
+        elif(win==y):
+            return 0
         else:
-            return-1
-
-
+            return -1
     
     @commands.check(joins_open)
     @commands.command()
@@ -140,7 +143,7 @@ class TicTacToe:
             await ctx.send("Occupied")
             return
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
-        self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
+##        self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
         await self.draw(ctx)
         if(self.wincon()<0):
