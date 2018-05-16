@@ -35,12 +35,23 @@ class TicTacToe:
 
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
 
-    @commands.command()
-    async def Forcestop(self,ctx):
+
+    def end(self):
         self.gs=False
         self.players_joined=0
         self.users.clear()
         self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
+        self.board_img=[
+[":arrow_upper_left::one::two::three:\n"],
+[":one:",self.blank,self.blank,self.blank,"\n"],
+[":two:",self.blank,self.blank,self.blank,"\n"],
+[":three:",self.blank,self.blank,self.blank,"\n"]
+]
+
+    
+    @commands.command()
+    async def Forcestop(self,ctx):
+        self.end()
         await ctx.send("The game is STOP")
 
     async def draw(self,ctx):
@@ -72,7 +83,7 @@ class TicTacToe:
             self.current_turn[1]=self.cross
             self.current_turn[2]=1
 
-    def check():
+    def wincon():
         s1=0
         s2=0
         s3=0
@@ -131,10 +142,10 @@ class TicTacToe:
         self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
         await self.draw(ctx)
-        if(self.check()<0):
+        if(self.wincon()<0):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
         else:
-            await ctx.send(self.users[self.check()].mention+"WONN!!")
+            await ctx.send(self.users[self.wincon()].mention+"WONN!!")
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
