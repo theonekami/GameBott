@@ -40,7 +40,7 @@ class TicTacToe:
         self.gs=False
         self.players_joined=0
         self.users.clear()
-        self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
+        self.current_turn.clear()
         self.board_img=[
 [":arrow_upper_left::one::two::three:\n"],
 [":one:",self.blank,self.blank,self.blank,"\n"],
@@ -146,7 +146,7 @@ class TicTacToe:
 ##        self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
         self.switch()
         await self.draw(ctx)
-        if(self.wincon()<0):
+        if(self.wincon()<0 && self.no_of_turns != 9):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
         elif(self.no_of_turns==9):
             await ctx.send("It's a TIEEEEE!!!!")
