@@ -148,7 +148,7 @@ class TicTacToe:
         await self.draw(ctx)
         if(self.wincon()<0):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
-        elif(no_of_turns==9):
+        elif(self.no_of_turns==9):
             await ctx.send("It's a TIEEEEE!!!!")
             self.end()            
         else:
