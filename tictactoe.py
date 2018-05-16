@@ -133,6 +133,7 @@ class TicTacToe:
         if( args is None):
             await ctx.send("Where do i put it?")
             return
+        self.no_of_turns+=1
         args=args.split(',')
         y=self.board_img[int(args[0])][int(args[1])]
         if( y != self.blank):
@@ -144,8 +145,12 @@ class TicTacToe:
         await self.draw(ctx)
         if(self.wincon()<0):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
+        elif(no_of_turns==9):
+            await ctx.send("It's a TIEEEEE!!!!")
+            self.end()            
         else:
             await ctx.send(self.users[self.wincon()].mention+"WONN!!")
+            self.end()
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
