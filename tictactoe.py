@@ -87,7 +87,7 @@ class TicTacToe:
         win=""
         x=self.cross
         y=self.circle
-        for i in (1, 4):
+        for i in range(1, 4):
             if (self.board_img[i][1]==self.board_img[i][2]==self.board_img[i][3]):
                 win=self.board_img[i][1]
                 break
@@ -148,7 +148,7 @@ class TicTacToe:
         await self.draw(ctx)
         if(self.wincon()<0):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
-        elif(no_of_turns==9):
+        elif(no_of_turns==9):t
             await ctx.send("It's a TIEEEEE!!!!")
             self.end()            
         else:
