@@ -100,9 +100,9 @@ class TicTacToe:
             win=self.board_img[1][1]
 
         if( win == x):
-            return 1
-        elif(win==y):
             return 0
+        elif(win==y):
+            return 1
         else:
             return -1
     
@@ -136,15 +136,16 @@ class TicTacToe:
         if( args is None):
             await ctx.send("Where do i put it?")
             return
-        self.no_of_turns+=1
+
         args=args.split(',')
         y=self.board_img[int(args[0])][int(args[1])]
         if( y != self.blank):
             await ctx.send("Occupied")
             return
+        self.no_of_turns+=1
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
-##        self.board_array[int(args[0])-1][int(args[1])-1]=self.current_turn[2]
-        self.switch()
+
+
         await self.draw(ctx)
         if(self.wincon()<0 and self.no_of_turns != 9):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
@@ -154,6 +155,7 @@ class TicTacToe:
         else:
             await ctx.send(self.users[self.wincon()].mention+"WONN!!")
             self.end()
+        self.switch()
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
