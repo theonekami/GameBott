@@ -89,8 +89,8 @@ class TicTacToe:
         s3=0
         s4=0
         for i in range(0,3):
-            s3+=self.board[i][i]
-            s4+=self.board[i][2-i]
+            s3+=self.board_array[i][i]
+            s4+=self.board_array[i][2-i]
             for j in range(0,3):
                s1+= self.board_array[i][j]
                s2+= self.board_array[j][i]
