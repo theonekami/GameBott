@@ -114,6 +114,7 @@ class TicTacToe:
         if(len(self.users)==self.no_of_players):
             self.gs=True
             await self.construct(ctx)
+            self.js=False
         
 
     @commands.command()
