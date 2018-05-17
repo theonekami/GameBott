@@ -38,6 +38,7 @@ class TicTacToe:
         self.users.clear()
         self.current_turn.clear()
         self.board_img.clear()
+        self.no_of_turns=0
         self.board_img=[
 [":arrow_upper_left::one::two::three:\n"],
 [":one:",self.blank,self.blank,self.blank,"\n"],
