@@ -20,7 +20,7 @@ class TicTacToe:
         self.users=[]
         self.no_of_players=2
         self.players_joined=0
-        self.no_of_turns=0;
+        self.no_of_turns=0
         
         self.blank=":red_circle:"
         self.cross=":crossed_swords:"
