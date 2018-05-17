@@ -37,17 +37,7 @@ class TicTacToe:
 
 
     def end(self):
-        self.gs=False
-        self.players_joined=0
-        self.users.clear()
-        self.current_turn.clear()
-        self.board_img=[
-[":arrow_upper_left::one::two::three:\n"],
-[":one:",self.blank,self.blank,self.blank,"\n"],
-[":two:",self.blank,self.blank,self.blank,"\n"],
-[":three:",self.blank,self.blank,self.blank,"\n"]
-]
-
+        self.__init__(self.bot)
     
     @commands.command()
     async def Forcestop(self,ctx):
@@ -100,9 +90,9 @@ class TicTacToe:
             win=self.board_img[1][1]
 
         if( win == x):
-            return 0
-        elif(win==y):
             return 1
+        elif(win==y):
+            return 0
         else:
             return -1
     
@@ -145,7 +135,7 @@ class TicTacToe:
         self.no_of_turns+=1
         self.board_img[int(args[0])][int(args[1])]=self.current_turn[1]
 
-
+        self.switch()
         await self.draw(ctx)
         if(self.wincon()<0 and self.no_of_turns != 8):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
@@ -155,7 +145,7 @@ class TicTacToe:
         else:
             await ctx.send(self.users[self.wincon()].mention+"WONN!!")
             self.end()
-        self.switch()
+
 
 def setup(bot):
     bot.add_cog(TicTacToe(bot)) 
