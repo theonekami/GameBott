@@ -6,10 +6,7 @@ async def game_on(ctx):
     return ctx.cog.gs
 
 async def joins_open(ctx):
-    if ctx.cog.no_of_players>ctx.cog.players_joined:
-        return True
-    else:
-        return False
+    return ctx.cog.js
 
 
 class TicTacToe:
@@ -20,7 +17,8 @@ class TicTacToe:
         self.users=[]
         self.no_of_players=2
         self.players_joined=0
-        self.no_of_turns=0
+        self.no_of_turns=0;
+        self.js=False
         
         self.blank=":red_circle:"
         self.cross=":crossed_swords:"
@@ -33,11 +31,20 @@ class TicTacToe:
 [":three:",self.blank,self.blank,self.blank,"\n"]
 ]
 
-        self.board_array=[[0,0,0],[0,0,0],[0,0,0]]
-
 
     def end(self):
-        self.__init__(self.bot)
+        self.gs=False
+        self.players_joined=0
+        self.users.clear()
+        self.current_turn.clear()
+        self.board_img.clear()
+        self.board_img=[
+[":arrow_upper_left::one::two::three:\n"],
+[":one:",self.blank,self.blank,self.blank,"\n"],
+[":two:",self.blank,self.blank,self.blank,"\n"],
+[":three:",self.blank,self.blank,self.blank,"\n"]
+]
+
     
     @commands.command()
     async def Forcestop(self,ctx):
@@ -112,6 +119,7 @@ class TicTacToe:
     @commands.command()
     async def tictactoe(self,ctx):
         await ctx.send("**Use** `.join` **To join**")
+        self.js=True
             
     @commands.check(game_on)
     @commands.command()
