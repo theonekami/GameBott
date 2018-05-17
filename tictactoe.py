@@ -98,9 +98,9 @@ class TicTacToe:
             win=self.board_img[1][1]
 
         if( win == x):
-            return 1
-        elif(win==y):
             return 0
+        elif(win==y):
+            return 1
         else:
             return -1
     
@@ -147,9 +147,9 @@ class TicTacToe:
 
         self.switch()
         await self.draw(ctx)
-        if(self.wincon()<0 and self.no_of_turns != 8):
+        if(self.wincon()<0 and self.no_of_turns != 9):
             await ctx.send(self.current_turn[0].mention+"**Use** `.play row,column` **to play**")
-        elif(self.no_of_turns==8):
+        elif(self.no_of_turns==9):
             await ctx.send("It's a TIEEEEE!!!!")
             self.end()            
         else:
