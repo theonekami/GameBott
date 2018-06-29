@@ -20,7 +20,7 @@ class Conquest:
         em.add_field(name="Name", value=Name,inline=False)
         em.add_field(name="Quote", value=Name,inline=False)
         em.add_field(name="Ace", value=Name,inline=False)
-        ctx.send(embed=em)
+        await ctx.send(embed=em)
 
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
