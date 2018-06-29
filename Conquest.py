@@ -15,7 +15,7 @@ class Conquest:
         Name= "Glass Evans"
         quote= '"*Might is Right*"'
         ace= "Kyurem-Black"
-        img="https://pre00.deviantart.net/02b7/th/pre/i/2012/064/6/4/black_kyurem_by_namh-d4rrv3d.jpg"
+        img="https://cdn.discordapp.com/attachments/404266499516268554/462127861428649984/Screen_Shot_2018-06-29_at_3.30.50_pm.png"
         em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
         em.add_field(name="**Ace**", value=ace,inline=False)
