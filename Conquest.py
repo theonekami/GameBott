@@ -16,19 +16,19 @@ class Conquest:
         quote= '"*Might is Right*"'
         ace= "Kyurem-Black"
         img="https://pre00.deviantart.net/02b7/th/pre/i/2012/064/6/4/black_kyurem_by_namh-d4rrv3d.jpg"
-        em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
         em.add_field(name="**Ace**", value=ace,inline=False)
+        em.set_image(url=img)
         await ctx.send(embed=em)
 
     @cq.command(name= "fire")
     async def cq_fire(self, ctx):
         em = discord.Embed()
-        Name= "Razan Atmadh**"
+        Name= "Razan Atmadh"
         quote= "*The Dead See All*"
         ace= "Mega-Houndoom"
-        img="https://orig00.deviantart.net/7bf1/f/2014/138/7/b/mega_houndoom_by_theblacksavior-d7ivyjl.jpg"
+        img="https://pre00.deviantart.net/c584/th/pre/f/2014/138/7/b/mega_houndoom_by_theblacksavior-d7ivyjl.jpg"
         em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
