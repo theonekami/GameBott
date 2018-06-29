@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 class Conquest:
-    def __init__(self, ctx,bot):
+    def __init__(self, bot):
         self.bot=bot
 
     @commands.group()
@@ -10,7 +10,7 @@ class Conquest:
         pass
 
     @cq.command(name= "ice")
-    async def cq_ice(ctx):
+    async def cq_ice(self, ctx):
         em = discord.Embed()
         Name= "Glass Evans"
         quote= "Might is Right"
