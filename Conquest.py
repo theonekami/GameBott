@@ -18,8 +18,8 @@ class Conquest:
         img="https://pre00.deviantart.net/02b7/th/pre/i/2012/064/6/4/black_kyurem_by_namh-d4rrv3d.jpg"
         em.set_image(url=img)
         em.add_field(name="Name", value=Name,inline=False)
-        em.add_field(name="Quote", value=Name,inline=False)
-        em.add_field(name="Ace", value=Name,inline=False)
+        em.add_field(name="Quote", value=quote,inline=False)
+        em.add_field(name="Ace", value=ace,inline=False)
         await ctx.send(embed=em)
 
 ##    @cq.command(name= "Flying")
