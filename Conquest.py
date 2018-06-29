@@ -9,7 +9,7 @@ class Conquest:
     async def cq(self, ctx):
         pass
 
-    @cq.command(name= "Ice")
+    @cq.command(name= "ice")
     async def cq_ice(ctx):
         em = discord.Embed()
         Name= "Glass Evans"
