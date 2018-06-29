@@ -44,7 +44,6 @@ def rolld(args):
 async def on_ready():
         print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
         print('Created by Kaminolucky')
-        return await client.change_presence(game=discord.Game(name='Bringing coffee to dumb people')) 
 
 
 
