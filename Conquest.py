@@ -2,7 +2,7 @@ import discord
 from discord.ext import commands
 
 class Conquest:
-    def __init__(self, bot):
+    def __init__(self, ctx,bot):
         self.bot=bot
 
     @commands.group()
