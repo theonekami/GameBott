@@ -44,7 +44,6 @@ def rolld(args):
 async def on_ready():
         print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
         print('Created by Kaminolucky')
-        await client.edit_profile(username= "BlackPaw")
         return await client.change_presence(game=discord.Game(name='Bringing coffee to dumb people')) 
 
 
@@ -73,4 +72,4 @@ async def reload(ctx):
         client.load_extension("tictactoe")
         await ctx.send("Good job. It's Reloaded. Who do i kill?")
         
-client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DW27KQ.vvG08o51-BQZBYc8TFPDJbm0RLM')
+client.run('NDE1MTQ5Mzk5NjUyNTY0OTk0.DhdPFQ.mWjVTF5lf0oWWZJQn8uNhtZB4IQ')
