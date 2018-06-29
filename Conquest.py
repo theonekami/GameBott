@@ -22,18 +22,18 @@ class Conquest:
         em.set_image(url=img)
         await ctx.send(embed=em)
 
-##    @cq.command(name= "fire")
-##    async def cq_fire(self, ctx):
-##        em = discord.Embed()
-##        Name= "Razan Atmadh"
-##        quote= "*The Dead See All*"
-##        ace= "Mega-Houndoom"
-##        img="https://pre00.deviantart.net/c584/th/pre/f/2014/138/7/b/mega_houndoom_by_theblacksavior-d7ivyjl.jpg"
-##        em.set_image(url=img)
-##        em.add_field(name="**Name**", value=Name,inline=False)
-##        em.add_field(name="**Quote**", value=quote,inline=False)
-##        em.add_field(name="**Ace**", value=ace,inline=False)
-##        await ctx.send(embed=em)
+    @cq.command(name= "fire")
+    async def cq_fire(self, ctx):
+        em = discord.Embed()
+        Name= "Razan Atmadh"
+        quote= "*The Dead See All*"
+        ace= "Mega-Houndoom"
+        img="https://cdn.discordapp.com/attachments/456079885769768961/462283728241164288/mega_houndoom_by_theblacksavior-d7ivyjl.png"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
 
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
