@@ -43,7 +43,7 @@ class Conquest:
         Name= "Anri of the mountain's peak"
         quote= '*"Welcome to the boundry of life and death"*'
         ace= "Giratina"
-        img="https://cdn.discordapp.com/attachments/433160058617200642/462447888320954388/Giratina.png"
+        img="https://cdn.discordapp.com/attachments/433160058617200642/462652822224371713/image.jpg"
         em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
