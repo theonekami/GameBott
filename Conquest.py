@@ -36,8 +36,8 @@ class Conquest:
         await ctx.send(embed=em)
 
 
-    @cq.command(name= "fire")
-    async def cq_fire(self, ctx):
+    @cq.command(name= "ghost")
+    async def cq_ghost(self, ctx):
         em = discord.Embed()
         Name= "Anri of the mountain's peak"
         quote= "*Welcome to the boundry of life and death*"
@@ -48,6 +48,20 @@ class Conquest:
         em.add_field(name="**Quote**", value=quote,inline=False)
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
+
+    @cq.command(name= "flying")
+    async def cq_fly(self, ctx):
+        em = discord.Embed()
+        Name= "Prince Yusuf"
+        quote= "*muntar se Amar* (immortal from magic)"
+        ace= "Lugia"
+        img="https://cdn.discordapp.com/attachments/407115849539911682/462497100215746563/test.jpg"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
+
 
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
