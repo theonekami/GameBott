@@ -16,7 +16,7 @@ class Conquest:
         quote= '"*Might is Right*"'
         ace= "Kyurem-Black"
         img="https://cdn.discordapp.com/attachments/404266499516268554/462605945550274560/black_kyurem_by_hasegawavega-d5rxah8.jpg"
-s        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
         em.add_field(name="**Ace**", value=ace,inline=False)
         em.set_image(url=img)
