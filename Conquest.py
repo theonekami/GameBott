@@ -81,7 +81,7 @@ class Conquest:
         em = discord.Embed(color=discord.Color.from_rgb(r=162,g=162,b=179))
         Name= "Erwin von Blutzenburg"
         quote= '*"Liberty in Peace, Resilience in War."*'
-        ace= "Scizor-mega???"
+        ace= "Mega-Scizor(???)"
         img="https://cdn.discordapp.com/attachments/407525090184658956/462635803533901824/6845f9cc188a4b232565775451c34f5f.jpg"
         em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
