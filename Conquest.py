@@ -26,7 +26,7 @@ class Conquest:
     async def cq_fire(self, ctx):
         em = discord.Embed()
         Name= "Razan Atmadh"
-        quote= "*The dead see all.*"
+        quote= '*"The dead see all."*'
         ace= "Mega-Houndoom"
         img="https://cdn.discordapp.com/attachments/456079885769768961/462283728241164288/mega_houndoom_by_theblacksavior-d7ivyjl.png"
         em.set_image(url=img)
@@ -40,7 +40,7 @@ class Conquest:
     async def cq_ghost(self, ctx):
         em = discord.Embed()
         Name= "Anri of the mountain's peak"
-        quote= "*Welcome to the boundry of life and death*"
+        quote= '*"Welcome to the boundry of life and death"*'
         ace= "Giratina"
         img="https://cdn.discordapp.com/attachments/433160058617200642/462447888320954388/Giratina.png"
         em.set_image(url=img)
@@ -53,7 +53,7 @@ class Conquest:
     async def cq_fly(self, ctx):
         em = discord.Embed()
         Name= "Prince Yusuf"
-        quote= "*muntar se Amar* (immortal from magic)"
+        quote= '*"muntar se Amar" (immortal from magic)*'
         ace= "Lugia"
         img="https://cdn.discordapp.com/attachments/407115849539911682/462497100215746563/test.jpg"
         em.set_image(url=img)
