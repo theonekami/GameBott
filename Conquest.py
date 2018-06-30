@@ -26,9 +26,23 @@ class Conquest:
     async def cq_fire(self, ctx):
         em = discord.Embed()
         Name= "Razan Atmadh"
-        quote= "*The Dead See All*"
+        quote= "*The dead see all.*"
         ace= "Mega-Houndoom"
         img="https://cdn.discordapp.com/attachments/456079885769768961/462283728241164288/mega_houndoom_by_theblacksavior-d7ivyjl.png"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
+
+
+    @cq.command(name= "fire")
+    async def cq_fire(self, ctx):
+        em = discord.Embed()
+        Name= "Anri of the mountain's peak"
+        quote= "*Welcome to the boundry of life and death*"
+        ace= "Giratina"
+        img="https://cdn.discordapp.com/attachments/433160058617200642/462447888320954388/Giratina.png"
         em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
