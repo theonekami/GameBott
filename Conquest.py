@@ -91,9 +91,9 @@ class Conquest:
 
     @cq.command(name= "psychic")
     async def cq_psychic(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=162,g=162,b=179))
+        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=122,b=249))
         Name= "Smeero Tykunaki"
-        quote= '* "Tuhaf topraklar, herkesin en öngörülebilir alanıdır." (The land of strange is the most predictable land of all.)*'
+        quote= '*"Tuhaf topraklar, herkesin en öngörülebilir alanıdır." (The land of strange is the most predictable land of all.)*'
         ace= "Tapu-Lele"
         img="https://cdn.discordapp.com/attachments/462678865706352641/462679903138217997/Untitled222.png"
         em.set_image(url=img)
