@@ -11,7 +11,7 @@ class Conquest:
 
     @cq.command(name= "ice")
     async def cq_ice(self, ctx):
-        em = discord.Embed()
+        em = discord.Embed(color=discord.Color.from_rgb(r=39,g=151,b=253))
         Name= "Glass Evans"
         quote= '"*Might is Right*"'
         ace= "Kyurem-Black"
@@ -24,7 +24,7 @@ class Conquest:
 
     @cq.command(name= "fire")
     async def cq_fire(self, ctx):
-        em = discord.Embed()
+        em = discord.Embed(color=discord.Color.from_rgb(r=240,g=127,b=47))
         Name= "Razan Atmadh"
         quote= '*"The dead see all."*'
         ace= "Mega-Houndoom"
@@ -38,7 +38,8 @@ class Conquest:
 
     @cq.command(name= "ghost")
     async def cq_ghost(self, ctx):
-        em = discord.Embed()
+        
+        em = discord.Embed(color=discord.Color.from_rgb(r=169,g=111,b=247))        
         Name= "Anri of the mountain's peak"
         quote= '*"Welcome to the boundry of life and death"*'
         ace= "Giratina"
@@ -64,7 +65,7 @@ class Conquest:
 
     @cq.command(name= "rock")
     async def cq_rock(self, ctx):
-        em = discord.Embed()
+        em = discord.Embed(color=discord.Color.from_rgb(r=208,g=151,b=2))
         Name= "Andrew Arslon"
         quote= '*"Those that lose wars are ones that start them. Those who win wars are the ones who bide their time."*'
         ace= "Terrakion"
