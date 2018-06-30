@@ -89,6 +89,19 @@ class Conquest:
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
 
+    @cq.command(name= "psychic")
+    async def cq_psychic(self, ctx):
+        em = discord.Embed(color=discord.Color.from_rgb(r=162,g=162,b=179))
+        Name= "Smeero Tykunaki"
+        quote= '* "Tuhaf topraklar, herkesin en öngörülebilir alanıdır." (The land of strange is the most predictable land of all.)*'
+        ace= "Tapu-Lele"
+        img="https://cdn.discordapp.com/attachments/462678865706352641/462679903138217997/Untitled222.png"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
+
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
 ##        em = discord.Embed()
