@@ -62,6 +62,18 @@ class Conquest:
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
 
+    @cq.command(name= "rock")
+    async def cq_fly(self, ctx):
+        em = discord.Embed()
+        Name= "Andrew Arslon"
+        quote= '*"Those that lose wars are ones that start them. Those who win wars are the ones who bide their time."*'
+        ace= "Terrakion"
+        img="https://cdn.discordapp.com/attachments/455576163562291211/462523425311948800/unknown.png"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
 
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
