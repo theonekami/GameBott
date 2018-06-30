@@ -51,7 +51,7 @@ class Conquest:
 
     @cq.command(name= "flying")
     async def cq_fly(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb((179,157,247)))
+        em = discord.Embed(color=discord.Color.from_rgb(r=179,g=157,b=247))
         Name= "Prince Yusuf"
         quote= '*"muntar se Amar" (immortal from magic)*'
         ace= "Lugia"
