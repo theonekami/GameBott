@@ -15,8 +15,8 @@ class Conquest:
         Name= "Glass Evans"
         quote= '"*Might is Right*"'
         ace= "Kyurem-Black"
-        img="https://cdn.discordapp.com/attachments/404266499516268554/462127861428649984/Screen_Shot_2018-06-29_at_3.30.50_pm.png"
-        em.add_field(name="**Name**", value=Name,inline=False)
+        img="https://cdn.discordapp.com/attachments/404266499516268554/462605945550274560/black_kyurem_by_hasegawavega-d5rxah8.jpg"
+s        em.add_field(name="**Name**", value=Name,inline=False)
         em.add_field(name="**Quote**", value=quote,inline=False)
         em.add_field(name="**Ace**", value=ace,inline=False)
         em.set_image(url=img)
@@ -63,7 +63,7 @@ class Conquest:
         await ctx.send(embed=em)
 
     @cq.command(name= "rock")
-    async def cq_fly(self, ctx):
+    async def cq_rock(self, ctx):
         em = discord.Embed()
         Name= "Andrew Arslon"
         quote= '*"Those that lose wars are ones that start them. Those who win wars are the ones who bide their time."*'
