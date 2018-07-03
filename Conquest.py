@@ -41,7 +41,7 @@ class Conquest:
         em = discord.Embed(color=discord.Color.from_rgb(r=254,g=175,b=213))
         Name= " President Atraxias"
         quote= '*"Some of the stranger machinations in the world turn out to be curiosities, wonders of the eye we never anticipated; it is best to keep an eye out for such events and creatures."*'
-        ace= "Magearnas"
+        ace= "Magearna"
         img="https://i.pinimg.com/originals/a7/fe/4c/a7fe4ce4d1300f7caec745ff0d59e1da.jpg"
         em.set_image(url=img)
         em.add_field(name="**Name**", value=Name,inline=False)
