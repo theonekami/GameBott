@@ -40,7 +40,7 @@ class Conquest:
     async def cq_fairy(self, ctx):
         em = discord.Embed(color=discord.Color.from_rgb(r=240,g=127,b=47))
         Name= " President Atraxias"
-        quote= '* "Some of the stranger machinations in the wosrld turn out to be curiosities, wonders of the eye we never anticipated; it is best to keep an eye out for such events and creatures."*'
+        quote= '*"Some of the stranger machinations in the world turn out to be curiosities, wonders of the eye we never anticipated; it is best to keep an eye out for such events and creatures."*'
         ace= "Magearnas"
         img="https://i.pinimg.com/originals/a7/fe/4c/a7fe4ce4d1300f7caec745ff0d59e1da.jpg"
         em.set_image(url=img)
