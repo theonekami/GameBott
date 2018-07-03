@@ -38,7 +38,7 @@ class Conquest:
 
     @cq.command(name= "fairy")
     async def cq_fairy(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=240,g=127,b=47))
+        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=175,b=213))
         Name= " President Atraxias"
         quote= '*"Some of the stranger machinations in the world turn out to be curiosities, wonders of the eye we never anticipated; it is best to keep an eye out for such events and creatures."*'
         ace= "Magearnas"
