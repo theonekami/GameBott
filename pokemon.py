@@ -8,7 +8,7 @@ class Pokemon:
     def __init__(self, bot):
         self.bot=bot
 
-    @self.bot.command()   
+    @commands.command()   
     async def poke(self, ctx,args):
         em = discord.Embed()
         async with aiohttp.get(pokemon+args) as res:
