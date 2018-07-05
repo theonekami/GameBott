@@ -118,7 +118,7 @@ class Conquest:
 
     @cq.command(name= "grass")
     async def cq_grass(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=122,b=249))
+        em = discord.Embed(color=discord.Color.from_rgb(r=37,g=159,b=24))
         Name= "Isaac Mì-Rianachd"
         quote= '*"Why help those who never helped me?"*'
         ace= "Mega- Venasaur"
