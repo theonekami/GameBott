@@ -13,8 +13,8 @@ class Pokemon:
     async def poke(self, ctx,args):
         em = discord.Embed()
         async with aiohttp.get(pokemon+args) as r:
-            await y=json.loads(r.text())
-        res.close()
+            y=json.loads(await r.text())
+        r.close()
         await ctx.send(y['name'])
 
 
