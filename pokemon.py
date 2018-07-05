@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import json
+import aiohttp
 
 pokemon= "http://pokeapi.co/api/v2/pokemon/"
 
