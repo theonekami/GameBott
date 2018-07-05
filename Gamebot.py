@@ -45,6 +45,7 @@ async def on_ready():
         print('You are running BasicBot v2.1') #Do not change this. This will really help us support you, if you need support.
         print('Created by Kaminolucky')
         client.load_extension("Conquest")
+        client.load_extension("Pokemon")
 
 
 
