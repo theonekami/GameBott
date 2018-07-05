@@ -12,7 +12,7 @@ class Pokemon:
     @commands.command()   
     async def poke(self, ctx,args):
         em = discord.Embed()
-        async with aiohttp.get(pokemon+args) as res:
+        async with aiohttp.get(pokemon+args) as r:
             y=json.loads(r.text)
         res.close()
         await ctx.send(y['name'])
