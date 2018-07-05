@@ -116,6 +116,20 @@ class Conquest:
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
 
+    @cq.command(name= "psychic")
+    async def cq_psychic(self, ctx):
+        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=122,b=249))
+        Name= "Isaac Mì-Rianachd"
+        quote= '*"Why help those who never helped me?"*'
+        ace= "Mega- Venasaur"
+        img="https://cdn.discordapp.com/attachments/431099406264041472/464266032966664192/Venusaur.png"
+        em.set_image(url=img)
+        em.add_field(name="**Name**", value=Name,inline=False)
+        em.add_field(name="**Quote**", value=quote,inline=False)
+        em.add_field(name="**Ace**", value=ace,inline=False)
+        await ctx.send(embed=em)
+    
+
 ##    @cq.command(name= "Flying")
 ##    async def cq_ice(ctx):
 ##        em = discord.Embed()
