@@ -19,12 +19,12 @@ class Pokemon:
         x=""
         for i in y["abilities"]:
             x+=i+" "
-        em.add_field(name="**Abilities**", text=x)
+        em.add_field(name="**Abilities**", value=x)
         x=""
         for i in y["baseStats"].keys():
             x+=str(i) + y["basestats"][i] + "\n"
         
-        em.add_field(name="**Stats**", text=x)
+        em.add_field(name="**Stats**", value=x)
         await ctx.send(embed=em)
 
 
