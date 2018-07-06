@@ -16,6 +16,16 @@ class Pokemon:
         r.close()
         em = discord.Embed(title="*"+y["Name"]+"*")
         em.set_thumbnail(url=y["image"])
+        x=""
+        for i in y["abilities"]:
+            x+=i+" "
+        em.add_field(name="**Abilities**", text=x)
+        x=""
+        for i in y["baseStats"].keys():
+            x+=str(i) + y["basestats"][i] + "\n"
+        
+        em.add_field(name="**Stats**", text=x)
+        await ctx.send(embed=em)
 
 
                 
