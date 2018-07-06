@@ -18,11 +18,11 @@ class Pokemon:
         em.set_thumbnail(url=y["image"])
         x=""
         for i in y["abilities"]:
-            x+=i+" "
+            x+=i+"\n"
         em.add_field(name="**Abilities**", value=x)
         x=""
         for i in y["baseStats"].keys():
-            x+=str(i) + y["baseStats"][i] + "\n"
+            x+=str(i)+" " + y["baseStats"][i] + "\n"
         
         em.add_field(name="**Stats**", value=x)
         await ctx.send(embed=em)
