@@ -14,7 +14,7 @@ class Pokemon:
         async with aiohttp.get(pokemon+str(args)) as r:
             y=json.loads(await r.text())
         r.close()
-        em = discord.Embed(title="*"+y["Name"]+"*")
+        em = discord.Embed(title="*"+y["name"]+"*")
         em.set_thumbnail(url=y["image"])
         x=""
         for i in y["abilities"]:
