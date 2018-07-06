@@ -3,7 +3,7 @@ from discord.ext import commands
 import json
 import aiohttp
 
-pokemon= "http://pokeapi.co/api/v2/pokemon/"
+pokemon= "http://api.tanvis.xyz/pokedex/"
 
 class Pokemon:
     def __init__(self, bot):
@@ -11,11 +11,11 @@ class Pokemon:
 
     @commands.command()   
     async def poke(self, ctx,args):
-        em = discord.Embed()
-        async with aiohttp.get(pokemon+args) as r:
+        async with aiohttp.get(pokemon+str(args)) as r:
             y=json.loads(await r.text())
         r.close()
-        await ctx.send(y['name'])
+        em = discord.Embed(title="*"+y["Name"]+"*")
+        em.set_thumbnail(url=y["image"])
 
 
                 
