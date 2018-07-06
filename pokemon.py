@@ -4,6 +4,7 @@ import json
 import aiohttp
 
 pokemon= "http://api.tanvis.xyz/pokedex/"
+pokemon2="http://pokeapi.co/api/v2/pokemon"
 
 class Pokemon:
     def __init__(self, bot):
@@ -11,19 +12,21 @@ class Pokemon:
 
     @commands.command()   
     async def poke(self, ctx,args):
-        async with aiohttp.get(pokemon+str(args)) as r:
+        async with aiohttp.get(pokemon2+str(args)) as r:
             y=json.loads(await r.text())
         r.close()
+        async with aiohttp.get(y["forms"][0]["url"]) as r:
+            img=json.loads(await r.text())
+        r.close()        
         em = discord.Embed(title="*"+y["name"]+"*")
-        em.set_thumbnail(url=y["image"])
+        em.set_thumbnail(url=img["sprites"]["front-default"])
         x=""
         for i in y["abilities"]:
-            x+=i+"\n"
+            x+=i["ability"]["name"].capitalize()+"\n"
         em.add_field(name="**Abilities**", value=x)
         x=""
-        for i in y["baseStats"].keys():
-            x+=str(i)+" " + y["baseStats"][i] + "\n"
-        
+        for j in range(0,6):
+            x+= y['stats'][j]['stat']['name'].capitalize() +" : "+ str(y['stats'][j]['base_stat']))+"\n"
         em.add_field(name="**Stats**", value=x)
         await ctx.send(embed=em)
 
