@@ -4,7 +4,7 @@ import json
 import aiohttp
 
 pokemon= "http://api.tanvis.xyz/pokedex/"
-pokemon2="http://pokeapi.co/api/v2/pokemon"
+pokemon2="http://pokeapi.co/api/v2/pokemon/"
 
 class Pokemon:
     def __init__(self, bot):
