@@ -22,7 +22,7 @@ class Pokemon:
         em.add_field(name="**Abilities**", value=x)
         x=""
         for i in y["baseStats"].keys():
-            x+=str(i) + y["basestats"][i] + "\n"
+            x+=str(i) + y["baseStats"][i] + "\n"
         
         em.add_field(name="**Stats**", value=x)
         await ctx.send(embed=em)
