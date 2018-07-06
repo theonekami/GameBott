@@ -19,7 +19,7 @@ class Pokemon:
             img=json.loads(await r.text())
         r.close()        
         em = discord.Embed(title="*"+y["name"]+"*")
-        em.set_thumbnail(url=img["sprites"]["front-default"])
+        em.set_thumbnail(url=img["sprites"]["front_default"])
         x=""
         for i in y["abilities"]:
             x+=i["ability"]["name"].capitalize()+"\n"
