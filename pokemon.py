@@ -25,11 +25,11 @@ class Pokemon:
             x+=i["ability"]["name"].capitalize()+"\n"
         em.add_field(name="**Abilities**", value=x)
         x=""
-        y=0
+        w=0
         for j in range(0,6):
             x+= y['stats'][5-j]['stat']['name'].capitalize() +" : "+ str(y['stats'][j]['base_stat'])+"\n"
-            y+=y['stats'][j]['base_stat']
-        x+="BST:" + str(y)
+            w+=y['stats'][j]['base_stat']
+        x+="BST:" + str(w)
         em.add_field(name="**Stats**", value=x)
         await ctx.send(embed=em)
 
