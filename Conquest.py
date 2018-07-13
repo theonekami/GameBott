@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
 
-types=["Dark","Dragon","Electric","Fairy","Fighting","Ghost","Ground","Normal","Poison","Steel","Water"]
-
+types=["Dark","Dragon","Electric","Fighting","Ground","Normal","Poison","Steel","Water"]
+a_types=["Bug","Fairy","Fire","Flying","Ghost","Grass","Ice","Psychic","Rock"]
 class Conquest:
     def __init__(self, bot):
         self.bot=bot
@@ -14,6 +14,9 @@ class Conquest:
         for i in types:
             x+=i+"\n"
         em.add_field(name="**Available types**", value=x,inline=False)
+        for i in a_types:
+            x+=i+"\n"
+        em.add_field(name="**Taken types**", value=x,inline=False)
         await ctx.send(embed= em)
 
     @cq.command(name= "ice")
