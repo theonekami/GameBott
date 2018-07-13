@@ -35,7 +35,7 @@ class Pokemon:
         await ctx.send(embed=em)
 
     @commands.command()   
-    async def randpoke(self, ctx,args):
+    async def randpoke(self, ctx):
         re=random.randint(1,803)
         async with aiohttp.get(pokemon2+str(re)) as r:
             y=json.loads(await r.text())
