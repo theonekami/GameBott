@@ -28,7 +28,7 @@ class Pokemon:
         x=""
         w=0
         for j in range(0,6):
-            x+= y['stats'][5-j]['stat']['name'].capitalize() +" : "+ str(y['stats'][j]['base_stat'])+"\n"
+            x+= y['stats'][5-j]['stat']['name'].capitalize() +" : "+ str(y['stats'][5-j]['base_stat'])+"\n"
             w+=y['stats'][j]['base_stat']
         x+="BST : " + str(w)
         em.add_field(name="**Stats**", value=x)
