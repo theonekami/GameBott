@@ -1,13 +1,20 @@
 import discord
 from discord.ext import commands
 
+types=["Dark","Dragon","Electric","Fairy","Fighting","Ghost","Ground","Normal","Poison","Steel","Water"]
+
 class Conquest:
     def __init__(self, bot):
         self.bot=bot
 
-    @commands.group()
+    @commands.group(invoke_without_command=True)
     async def cq(self, ctx):
-        pass
+        em= discord.Embed()
+        x=""
+        for i in types:
+            x+=i+"\n"
+        em.add_field(name="**Available types**", value=x,inline=False)
+        await ctx.send(embed= em)
 
     @cq.command(name= "ice")
     async def cq_ice(self, ctx):
@@ -129,14 +136,6 @@ class Conquest:
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
     
-
-##    @cq.command(name= "Flying")
-##    async def cq_ice(ctx):
-##        em = discord.Embed()
-##        name= "Glass Evans"
-##        quote= "Might is Right"
-##        ace= "Kyurem-Black"
-##        
                 
 
 def setup(bot):
