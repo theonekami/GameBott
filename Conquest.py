@@ -1,8 +1,8 @@
 import discord
 from discord.ext import commands
 
-types=["Dark","Dragon","Electric","Fighting","Ground","Normal","Poison","Steel","Water"]
-a_types=["Bug","Fairy","Fire","Flying","Ghost","Grass","Ice","Psychic","Rock"]
+types=["Dark","Dragon","Electric","Fighting","Ghost","Ground","Normal","Poison","Steel","Water"]
+a_types=["Bug","Fairy","Fire","Flying","Grass","Ice","Psychic","Rock"]
 class Conquest:
     def __init__(self, bot):
         self.bot=bot
@@ -60,20 +60,6 @@ class Conquest:
         em.add_field(name="**Ace**", value=ace,inline=False)
         await ctx.send(embed=em)
 
-
-    @cq.command(name= "ghost")
-    async def cq_ghost(self, ctx):
-        
-        em = discord.Embed(color=discord.Color.from_rgb(r=169,g=111,b=247))        
-        Name= "Anri of the mountain's peak"
-        quote= '*"Welcome to the boundry of life and death"*'
-        ace= "Giratina"
-        img="https://cdn.discordapp.com/attachments/433160058617200642/462652822224371713/image.jpg"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
 
     @cq.command(name= "flying")
     async def cq_fly(self, ctx):
