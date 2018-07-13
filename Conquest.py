@@ -13,10 +13,11 @@ class Conquest:
         x=""
         for i in types:
             x+=i+"\n"
-        em.add_field(name="**Available types**", value=x,inline=False)
+        em.add_field(name="**Available types**", value=x)
+        x=""
         for i in a_types:
             x+=i+"\n"
-        em.add_field(name="**Taken types**", value=x,inline=False)
+        em.add_field(name="**Taken types**", value=x)
         await ctx.send(embed= em)
 
     @cq.command(name= "ice")
