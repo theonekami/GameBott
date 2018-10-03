@@ -9,7 +9,7 @@ async def joins_open(ctx):
     return ctx.cog.js
 
 
-class TicTacToe:
+class Uno:
     def __init__(self, bot):
         self.bot=bot
 
@@ -20,16 +20,6 @@ class TicTacToe:
         self.no_of_turns=0;
         self.js=False
         
-        self.blank=":red_circle:"
-        self.cross=":crossed_swords:"
-        self.circle=":shield:"
-        self.current_turn=[]
-        self.board_img=[
-[":arrow_upper_left::one::two::three:\n"],
-[":one:",self.blank,self.blank,self.blank,"\n"],
-[":two:",self.blank,self.blank,self.blank,"\n"],
-[":three:",self.blank,self.blank,self.blank,"\n"]
-]
 
 
     def end(self):
