@@ -12,13 +12,13 @@ class Battle:
 
     def rete(self):
         x=""
-        for i in enemies:
+        for i in self.enemies:
             x+=i+" "
         return x
 
     def reta(self):
         x=""
-        for i in enemies:
+        for i in self.allies:
             x+=i+" "
         return x
 
