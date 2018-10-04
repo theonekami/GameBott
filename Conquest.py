@@ -14,8 +14,12 @@ class Fite:
         self.b=Battle()
         self.msg=self.b.top +self.b.mid+self.b.end
 
-    @commands.command()
-    async def show(self, ctx):
+    @commands.group()
+    async def battle(self,ctx):
+        pass
+    
+    @battle.command(name="show")
+    async def battle_show(self, ctx):
         await ctx.send(self.msg)
                 
 
