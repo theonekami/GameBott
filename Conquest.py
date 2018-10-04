@@ -5,7 +5,7 @@ from discord.ext import commands
 class Battle:
     def __init__(self):
         self.top="```"
-        self.mid="\n----------------------------------------"
+        self.mid="\n----------------------------------------\n"
         self.end="```"
         self.enemies=[]
         self.allies=[]
@@ -31,6 +31,16 @@ class Fite:
     @commands.group()
     async def battle(self,ctx):
         pass
+
+    @battle.command(name="adde"):
+    async def battle_addenemy(self,ctx,*,args):
+        self.b.enemies.append(str(args))
+        ctx.send(args+" has been added on the enemy side")
+        
+    @battle.command(name="adda"):
+    async def battle_addallie(self,ctx,*,args):
+        self.b.allies.append(str(args))
+        ctx.send(args+" has been added on the ally side")
     
     @battle.command(name="show")
     async def battle_show(self, ctx):
