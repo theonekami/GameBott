@@ -33,8 +33,8 @@ class Fite:
     async def battle(self,ctx):
         pass
 
-    @battle.command(name="Clear")
-    async def battle(self, ctx):
+    @battle.command(name="clear")
+    async def battle_clr(self, ctx):
         self.b=Battle()
     
     @battle.command(name="adde")
