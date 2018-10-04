@@ -32,12 +32,12 @@ class Fite:
     async def battle(self,ctx):
         pass
 
-    @battle.command(name="adde"):
+    @battle.command(name="adde")
     async def battle_addenemy(self,ctx,*,args):
         self.b.enemies.append(str(args))
         ctx.send(args+" has been added on the enemy side")
         
-    @battle.command(name="adda"):
+    @battle.command(name="adda")
     async def battle_addallie(self,ctx,*,args):
         self.b.allies.append(str(args))
         ctx.send(args+" has been added on the ally side")
