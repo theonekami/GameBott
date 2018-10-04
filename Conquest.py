@@ -1,15 +1,15 @@
 import discord
 from discord.ext import commands
-
+import re
 
 class Battle:
     def __init__(self):
         self.top="```"
-        self.mid="\n---------------------------------------------------------\n"
+        self.mid="\n--------------------------------------------------------------------\n"
         self.end="```"
         self.enemies=[]
         self.allies=[]
-        
+        self.format=re.compile(r'\(\d+\)')
 
     def rete(self):
         x=""
@@ -46,6 +46,10 @@ class Fite:
     async def battle_addallie(self,ctx,*,args):
         self.b.allies.append(str(args))
         await ctx.send(args+" has been added on the ally side")
+
+    @battle.command(name="hp")
+    async def battle_hp(self,ctx,*,args):
+        
     
     @battle.command(name="show")
     async def battle_show(self, ctx):
