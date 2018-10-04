@@ -1,132 +1,23 @@
 import discord
 from discord.ext import commands
 
-types=["Dark","Dragon","Electric","Fighting","Ghost","Ground","Normal","Poison","Steel","Water"]
-a_types=["Bug","Fairy","Fire","Flying","Grass","Ice","Psychic","Rock"]
-class Conquest:
+
+class Battle:
+    def __init__(self):
+        self.top="```"
+        self.mid="----------------------------------------"
+        self.end="```"
+
+class Fite:
     def __init__(self, bot):
         self.bot=bot
+        self.b=Battle()
+        self.msg=self.b.top +self.b.mid+self.b.end
 
-    @commands.group(invoke_without_command=True)
-    async def cq(self, ctx):
-        em= discord.Embed()
-        x=""
-        for i in types:
-            x+=i+"\n"
-        em.add_field(name="**Available types**", value=x)
-        x=""
-        for i in a_types:
-            x+=i+"\n"
-        em.add_field(name="**Taken types**", value=x)
-        await ctx.send(embed= em)
-
-    @cq.command(name= "ice")
-    async def cq_ice(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=39,g=151,b=253))
-        Name= "Glass Evans"
-        quote= '"*Might is Right*"'
-        ace= "Kyurem-Black"
-        img="https://cdn.discordapp.com/attachments/404266499516268554/462605945550274560/black_kyurem_by_hasegawavega-d5rxah8.jpg"
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        em.set_image(url=img)
-        await ctx.send(embed=em)
-
-    @cq.command(name= "fire")
-    async def cq_fire(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=240,g=127,b=47))
-        Name= "Razan Atmadh"
-        quote= '*"The dead see all."*'
-        ace= "Mega-Houndoom"
-        img="https://cdn.discordapp.com/attachments/456079885769768961/462283728241164288/mega_houndoom_by_theblacksavior-d7ivyjl.png"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-
-    @cq.command(name= "fairy")
-    async def cq_fairy(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=175,b=213))
-        Name= " President Atraxias"
-        quote= '*"Some of the stranger machinations in the world turn out to be curiosities, wonders of the eye we never anticipated; it is best to keep an eye out for such events and creatures."*'
-        ace= "Magearna"
-        img="https://i.pinimg.com/originals/a7/fe/4c/a7fe4ce4d1300f7caec745ff0d59e1da.jpg"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-
-    @cq.command(name= "flying")
-    async def cq_fly(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=179,g=157,b=247))
-        Name= "Prince Yusuf"
-        quote= '*"muntar se Amar" (immortal from magic)*'
-        ace= "Lugia"
-        img="https://cdn.discordapp.com/attachments/407115849539911682/462497100215746563/test.jpg"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-    @cq.command(name= "rock")
-    async def cq_rock(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=208,g=151,b=2))
-        Name= "Andrew Arslon"
-        quote= '*"Those that lose wars are ones that start them. Those who win wars are the ones who bide their time."*'
-        ace= "Terrakion"
-        img="https://cdn.discordapp.com/attachments/455576163562291211/462523425311948800/unknown.png"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-    @cq.command(name= "bug")
-    async def cq_bug(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=162,g=162,b=179))
-        Name= "Erwin von Blutzenburg"
-        quote= '*"Liberty in Peace, Resilience in War."*'
-        ace= "Mega-Scizor(???)"
-        img="https://cdn.discordapp.com/attachments/407525090184658956/462635803533901824/6845f9cc188a4b232565775451c34f5f.jpg"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-    @cq.command(name= "psychic")
-    async def cq_psychic(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=254,g=122,b=249))
-        Name= "Smeero Tykunaki"
-        quote= '*"Tuhaf topraklar, herkesin en öngörülebilir alanıdır." (The land of strange is the most predictable land of all.)*'
-        ace= "Tapu-Lele"
-        img="https://cdn.discordapp.com/attachments/462678865706352641/462679903138217997/Untitled222.png"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-
-    @cq.command(name= "grass")
-    async def cq_grass(self, ctx):
-        em = discord.Embed(color=discord.Color.from_rgb(r=37,g=159,b=24))
-        Name= "Isaac Mì-Rianachd"
-        quote= '*"Why help those who never helped me?"*'
-        ace= "Mega- Venasaur"
-        img="https://cdn.discordapp.com/attachments/431099406264041472/464266032966664192/Venusaur.png"
-        em.set_image(url=img)
-        em.add_field(name="**Name**", value=Name,inline=False)
-        em.add_field(name="**Quote**", value=quote,inline=False)
-        em.add_field(name="**Ace**", value=ace,inline=False)
-        await ctx.send(embed=em)
-    
+    @commands.command()
+    async def show(self, ctx):
+        await ctx.send(self.msg)
                 
 
 def setup(bot):
-    bot.add_cog(Conquest(bot))
+    bot.add_cog(Battle(bot))
