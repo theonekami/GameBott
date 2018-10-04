@@ -20,4 +20,4 @@ class Fite:
                 
 
 def setup(bot):
-    bot.add_cog(Battle(bot))
+    bot.add_cog(Fite(bot))
