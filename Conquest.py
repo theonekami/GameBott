@@ -12,14 +12,14 @@ class Battle:
 
     def rete(self):
         x=""
-        for i in self.enemies:
-            x+=i+" "
+        for i in range (0,len(self.enemies)):
+            x+=str(i+1)+":" + self.enemies[i] +" "
         return x
 
     def reta(self):
         x=""
-        for i in self.allies:
-            x+=i+" "
+        for i in range (0,len(self.allies)):
+            x+=str(i+1)+":" + self.allies[i] +" "
         return x
 
 class Fite:
