@@ -5,10 +5,11 @@ from discord.ext import commands
 class Battle:
     def __init__(self):
         self.top="```"
-        self.mid="\n----------------------------------------\n"
+        self.mid="\n---------------------------------------------------------\n"
         self.end="```"
         self.enemies=[]
         self.allies=[]
+        
 
     def rete(self):
         x=""
@@ -32,6 +33,10 @@ class Fite:
     async def battle(self,ctx):
         pass
 
+    @battle.command(name="Clear")
+    async def battle(self, ctx):
+        self.b=Battle()
+    
     @battle.command(name="adde")
     async def battle_addenemy(self,ctx,*,args):
         self.b.enemies.append(str(args))
