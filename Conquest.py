@@ -47,9 +47,9 @@ class Fite:
         self.b.allies.append(str(args))
         await ctx.send(args+" has been added on the ally side")
 
-    @battle.command(name="hp")
-    async def battle_hp(self,ctx,*,args):
-        
+##    @battle.command(name="hp")
+##    async def battle_hp(self,ctx,*,args):
+##        
     
     @battle.command(name="show")
     async def battle_show(self, ctx):
