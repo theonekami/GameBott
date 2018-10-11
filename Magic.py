@@ -11,10 +11,10 @@ class Magic:
     async def card(self,ctx,args):
         y=str(args)
         async with aiohttp.get('https://api.magicthegathering.io/v1/cards?name="'+y+'"') as res:
-            if (res.status_code==200):
+            if (res.status==200):
                 y=json.loads(res.text)
             else:
-                await ctx.send("Card Not Found")
+                await ctx.send("Card named" + str(args)+" not found")
                 res.close()
                 return
         res.close()
