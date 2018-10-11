@@ -15,11 +15,11 @@ class Magic:
             print(res.status)
             y=json.loads(await res.text())
         res.close()
-        if(not len(y)):
+        try:
             em = discord.Embed(title=y['cards'][0]['name'])
             em.set_image(url=y['cards'][0]['imageUrl'])
             await ctx.send(embed= em)
-        else:
+        except:
             await ctx.send("Card name " + str(args) + " not found")
 
 def setup(bot):
