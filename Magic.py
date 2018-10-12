@@ -8,7 +8,7 @@ class Magic:
         self.bot=bot
 
     @commands.command()
-    async def card(self,ctx,args):
+    async def card(self,ctx,*,args):
         x=str(args)
         y=None
         async with aiohttp.get('https://api.magicthegathering.io/v1/cards?name="'+x+'"') as res:
